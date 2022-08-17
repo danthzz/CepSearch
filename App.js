@@ -4,20 +4,19 @@ import { StyleSheet, Text, TextInput, View } from 'react-native';
 const style = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#eeeee4",
+    backgroundColor: "#223240",
     paddingHorizontal: 20,
     justifyContent: "center",
   },
   logo:{width: "100%", height: 200, alignSelf: 'center'},
-  title:{fontSize: 24, fontWeight: 'bold', letterSpacing:1, textAlign:'center', marginVertical: 15}
-  ,input:{backgroundColor: "#eee", padding: 15, fontSize: 18, marginTop: 7, borderRadius: 5, borderWidth: .7}
+  title:{fontSize: 24, fontWeight: 'bold', letterSpacing:1, textAlign:'center', marginVertical: 15, color:"#93D94E"}
+  ,input:{backgroundColor: "#60BF81", padding: 15, fontSize: 18, marginTop: 7, borderRadius: 5, borderWidth: .7}
 })
 
 
 export default function App() {
   const [cep,setCep] = useState('');
   const [Logradouro,setLogradouro] = useState('');
-  const [Complemento,setComplemento] = useState('');
   const [Bairro,setBairro] = useState('');
   const [Localidade,setLocalidade] = useState('');
   const [UF,setUF] = useState('');
@@ -29,7 +28,6 @@ export default function App() {
 
     setBairro(res.bairro);
     setLocalidade(res.localidade);
-    setComplemento(res.complemento);
     setLogradouro(res.logradouro);
     setUF(res.uf);
   }
@@ -45,7 +43,6 @@ export default function App() {
       }}
       keyboardType='number-pad'></TextInput>
       <TextInput style={style.input} value={Logradouro} placeholder='Logradouro'></TextInput>
-      <TextInput style={style.input} value={Complemento} placeholder='Complemento'></TextInput>
       <TextInput style={style.input} value={Bairro} placeholder='Bairro'></TextInput>
       <TextInput style={style.input} value={Localidade} placeholder='Cidade'></TextInput>
       <TextInput style={style.input} value={UF} placeholder='Estado'></TextInput>
