@@ -1,6 +1,6 @@
 # CepSearch
 
-A aplicação front-end foi desenvolvida utizando as seguintes tecnologias:
+A aplicação desenvolvida utizando as seguintes tecnologias:
 
 * React Native
 * HTML
